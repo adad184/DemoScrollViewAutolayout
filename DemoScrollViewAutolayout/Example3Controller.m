@@ -50,14 +50,17 @@
     
     
     [v1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(scrollView).multipliedBy(1.1);
+        
         make.left.top.right.equalTo(scrollView).insets(UIEdgeInsetsMake(10, 10, 0, 10));
+        
+        make.width.equalTo(scrollView).multipliedBy(1.1);
         make.bottom.equalTo(v2.mas_top).offset(-50);
         make.height.equalTo(@200);
     }];
     
     [v2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(scrollView);
+        
         make.left.right.equalTo(v1).insets(UIEdgeInsetsMake(0, 50, 0, 50));
         make.height.equalTo(@250);
     }];
